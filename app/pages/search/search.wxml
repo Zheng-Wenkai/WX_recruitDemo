@@ -1,0 +1,14 @@
+<!--pages/search/search.wxml-->
+<input bindinput='getRange'></input>
+<button bindtap='searchForm'>查询</button>
+<image src="{{imageSrc}}"/>
+<text>{{info.fullName}}</text>
+<text>{{info.gender}}</text>
+<text>{{info.studentId}}</text>
+<text>{{info.major}}</text>
+<text>{{info.college}}</text>
+<text>{{info.departmentsA}}</text>
+<text>{{info.departmentsB}}</text>
+<text>{{info.phoneNumber}}</text>
+<text>{{info.location}}</text>
+<text>{{info.introduction}}</text>

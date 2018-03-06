@@ -1,0 +1,5 @@
+<!--排队类型-->
+<button bindtap='onlineRange'>线上排队</button>
+<button bindtap='presentRange'>现场排队</button>
+<text>当前线上排队人数为：{{onlineNumber}}\n</text>
+<text>当前现场排队人数为：{{presentNumber}}\n</text>

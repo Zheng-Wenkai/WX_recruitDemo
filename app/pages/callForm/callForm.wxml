@@ -1,0 +1,14 @@
+<!--pages/callForm/callForm.wxml-->
+<image src="{{imageSrc}}"/>
+<text>{{info.fullName}}</text>
+<text>{{info.gender}}</text>
+<text>{{info.studentId}}</text>
+<text>{{info.major}}</text>
+<text>{{info.college}}</text>
+<text>{{info.departmentsA}}</text>
+<text>{{info.departmentsB}}</text>
+<text>{{info.phoneNumber}}</text>
+<text>{{info.location}}</text>
+<text>{{info.introduction}}</text>
+<button bindtap='isInterviewConfirm'>已到场</button>
+<button bindtap='notInterviewConfirm'>未到场</button>

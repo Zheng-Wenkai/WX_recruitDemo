@@ -1,0 +1,43 @@
+<!--报名表单-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view>姓名:</view>
+  <input name="fullName" />
+
+  <picker value="{{xingbie}}" range="{{gender}}" name="xingbie" bindchange='bindGenderChange'>
+    性别：{{gender[xingbie]}}
+  </picker>
+
+  <picker value="{{xueyuan}}" range="{{college}}" name="xueyuan" bindchange='bindCollegeChange'>
+    学院：{{college[xueyuan]}}
+  </picker>
+
+  <view>专业:</view>
+  <input name="major" />
+
+  <view>本人学号:</view>
+  <input name="studentId" bindinput='getstudentId' type="number" />
+
+  <view>联系电话:</view>
+  <input name="phoneNumber" type="number" />
+
+  <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
+    部门意愿一：{{departments[wishA]}}
+  </picker>
+
+  <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange'>
+    部门意愿二：{{departments[wishB]}}
+  </picker>
+
+  <picker value="{{quyu}}" range="{{location}}" name="quyu" bindchange='bindLocationChange'>
+    面试区域：{{location[quyu]}}
+  </picker>
+
+  <view>个人简介</view>
+
+  <textarea name='introduction' />
+
+  <button bindtap="uploadPic">上传照片</button>
+  <button formType="submit">提交表格</button>
+
+</form>

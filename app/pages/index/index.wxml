@@ -1,0 +1,4 @@
+<!-- 首页 -->
+<button bindtap='signClick'>报名</button>
+<button bindtap='interviewClick'>面试官</button>
+<button bindtap='personelClick'>工作人员</button>
