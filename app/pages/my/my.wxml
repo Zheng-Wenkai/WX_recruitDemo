@@ -1,4 +1,25 @@
 <!--个人页面-->
-<button>报名</button>
-<button bindtap='searchRangeState'>查询排队情况</button>
-<button bindtap='searchResult'>查询面试结果</button>
+<view class='container'>
+    <image class='img1' src='/image/my3.jpg'></image>
+    <image class='img2' src='/image/my1.jpg'></image>
+    <view class='content1'>
+        <button class='btn1'>报名</button>
+        <button  class='btn2' bindtap='searchRangeState'>查询排队情况</button>
+    </view>
+
+    <view class='border'></view>
+
+    <view class='content2'>
+        <view class='data'>姓名：</view>
+        <view class='data'>学院：</view>
+        <view class='data'>专业：</view>
+        <view class='data'>面试时间：</view>
+        <view class='data'>部门意愿：</view>
+        <view class='data'>报名类型：</view>
+    </view>
+
+    <view class='border'></view>
+
+    <button class='btn3' bindtap='searchResult'>查询面试结果</button>
+
+</view>
