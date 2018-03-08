@@ -1,4 +1,33 @@
 <!-- 首页 -->
-<button bindtap='signClick'>报名</button>
-<button bindtap='interviewClick'>面试官</button>
-<button bindtap='personelClick'>工作人员</button>
+<view class='container'>
+    <swiper indicator-dots='true' autoplay='true' interval='5000' indicator-color='rgba(2, 0, 0, .3)' indicator-active-color='rgba(255, 255, 255, .8)'>
+        <swiper-item>
+            <image src='/image/index1.png'> </image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/image/index1.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/image/index1.png'></image>
+        </swiper-item>
+    </swiper>
+
+    <view class='content'>
+        <view class='img-top'>
+            <button class='button1' bindtap='signClick'>报名</button>
+            <image src='/image/index2.jpg'></image>
+        </view>
+        <view class='img'>
+            <button class='button2' bindtap='interviewClick'>面试官</button>
+            <image src='/image/index3.jpg'></image>
+        </view>
+        <view class='img'>
+            <button class='button3' bindtap='personelClick'>工作人员</button>
+            <image src='/image/index4.jpg'></image>
+        </view>
+    </view>
+
+    <view class='border1'></view>
+    <view class='border2'></view>
+    <view class='border3'></view>
+</view>
