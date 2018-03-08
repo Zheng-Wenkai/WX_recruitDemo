@@ -1,1 +1,134 @@
-/* pages/signForm/signForm.wxss */
+view{
+  font-size: 28rpx;
+}
+
+picker{
+  font-size: 28rpx;
+}
+
+.frame{
+  border-style: solid;
+  border-color: #2780D6;
+  border-width: 6rpx;
+  margin: 25rpx 30rpx 70rpx 30rpx;
+}
+
+.triangle-flex{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.triangle-1{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+}
+
+.triangle-2{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(90deg)
+}
+
+.triangle-3{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(270deg)
+}
+
+.triangle-4{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(180deg)
+}
+
+.title{
+  position: absolute;
+  top:90rpx;
+  left:150rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.xiexian{
+  height: 2rpx;
+  margin: -10rpx -10rpx;
+  background: #2780D6;
+  width: 60rpx;
+  transform: rotate(130deg)
+}
+
+button{
+  position: relative;
+  left: 10rpx;
+  background-color: white;
+  height: 60rpx; 
+  width: 175rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+button::after{
+  border: 4rpx solid gray;
+}
+
+.information{
+  position: relative;
+  left:90rpx;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx; 
+}
+.item input{
+  margin-left:60rpx;
+}
+.item picker{
+  margin-left:60rpx;
+}
+
+input{
+  border: 2rpx solid gray;
+  border-radius: 15rpx;
+  width: 380rpx;
+}
+
+picker{
+  position: relative;
+  border: 2rpx solid gray;
+  border-radius: 15rpx;
+  width: 380rpx;
+  height:60rpx;
+}
+
+textarea{
+  border: 2rpx solid gray;
+  border-radius: 15rpx;
+  width: 560rpx;
+  margin-left: -30rpx;
+}
