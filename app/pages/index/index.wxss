@@ -9,30 +9,27 @@ swiper image {
     width: 100%;
 }
 
-button {
+.btn {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.0);
     width: 230rpx;
     height: 50rpx;
-    line-height: 50rpx;
     color: #fff;
     font-size: 40rpx;
-    font-family: Arial;
 }
 
 .button1 {
     top: 560rpx;
-    left: 50rpx;
+    left: 120rpx;
 }
 
 .button2 {
     top: 855rpx;
-    left: 70rpx;
+    left: 120rpx;
 }
 
 .button3 {
     top: 1140rpx;
-    left: 90rpx;
+    left: 120rpx;
 }
 
 .content {

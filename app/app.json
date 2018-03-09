@@ -1,10 +1,17 @@
 {
   "pages":[
     "pages/index/index",
+    
     "pages/callType/callType",
-    "pages/my/my",
-    "pages/search/search",
+    
     "pages/signType/signType",
+    
+            "pages/my/my",
+
+
+
+
+    "pages/search/search",
     "pages/signForm/signForm",
     "pages/perlogin/perlogin",
     "pages/inlogin/inlogin",
@@ -18,19 +25,20 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的"
-      }
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/image/index-icon2.png",
+            "selectedIconPath": "/image/index-icon1.png"
+        },
+        {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath": "/image/my-icon1.png",
+            "selectedIconPath": "/image/my-icon2.png"
+        }
     ]
-  }
+}
 }

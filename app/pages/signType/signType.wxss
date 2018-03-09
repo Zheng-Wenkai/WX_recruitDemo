@@ -15,25 +15,21 @@ image {
     margin-top:120rpx;
 }
 
-button {
+.btn {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.0);
+    left: 110rpx;
     width: 230rpx;
     height: 50rpx;
-    line-height: 50rpx;
     color: #fff;
     font-weight: bold;
     font-size: 40rpx;
-    font-family: Arial;
     text-shadow: 0 0 14rpx #000;
 }
 
 .button1 {
     top: 180rpx;
-    left: 70rpx;
 }
 
 .button2 {
     top: 530rpx;
-    left: 70rpx;
 }
