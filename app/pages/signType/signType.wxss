@@ -1,1 +1,35 @@
 /* pages/signType/signType.wxss */
+
+image {
+    width: 580rpx;
+    height: 220rpx;
+    border-radius: 80rpx;
+    border: 4rpx solid rgba(33, 33, 33, 1);
+}
+
+.img1{
+    margin-top:148rpx;
+}
+
+.img2{
+    margin-top:120rpx;
+}
+
+.btn {
+    position: absolute;
+    left: 110rpx;
+    width: 230rpx;
+    height: 50rpx;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40rpx;
+    text-shadow: 0 0 14rpx #000;
+}
+
+.button1 {
+    top: 180rpx;
+}
+
+.button2 {
+    top: 530rpx;
+}
