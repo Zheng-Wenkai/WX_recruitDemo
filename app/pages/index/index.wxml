@@ -2,13 +2,13 @@
 <view class='container'>
     <swiper indicator-dots='true' autoplay='true' interval='5000' indicator-color='rgba(2, 0, 0, .3)' indicator-active-color='rgba(255, 255, 255, .8)'>
         <swiper-item>
-            <image src='/image/index1.png'> </image>
+            <image src='/image/carousel1.jpg'> </image>
         </swiper-item>
         <swiper-item>
-            <image src='/image/index1.png'></image>
+            <image src='/image/carousel2.jpg'></image>
         </swiper-item>
         <swiper-item>
-            <image src='/image/index1.png'></image>
+            <image src='/image/carousel3.jpg'></image>
         </swiper-item>
     </swiper>
 
