@@ -1,1 +1,35 @@
 /* pages/callForm/callForm.wxss */
+.information{
+  height: 1016rpx;
+  width: 614rpx;
+  margin-left: 48rpx; 
+  margin-top: 50rpx;
+  padding: 20rpx;
+  border: 2rpx solid Gainsboro;
+  border-radius: 15rpx;
+}
+
+text{
+  word-break: break-all;
+}
+
+.button-list{
+  display: flex;
+  position: relative;
+  left: 60rpx;
+}
+
+button{
+  position: relative;
+  left: 20rpx;
+  background-color: white;
+  height: 60rpx; 
+  width: 155rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  margin: 75rpx;
+}
+
+button::after{
+  border: 4rpx solid Gainsboro;
+}

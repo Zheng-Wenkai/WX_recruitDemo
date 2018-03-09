@@ -92,7 +92,7 @@ button{
 }
 
 button::after{
-  border: 4rpx solid gray;
+  border: 4rpx solid Gainsboro;
 }
 
 .information{
@@ -105,31 +105,37 @@ button::after{
   align-items: center;
   margin-top: 40rpx; 
 }
+.item view{
+    font-weight: 600;
+}
 .item input{
   margin-left:60rpx;
+  padding-left: 30rpx;
 }
 .item picker{
   margin-left:60rpx;
+  padding-left: 20rpx;
 }
 
 input{
-  border: 2rpx solid gray;
+  border: 2rpx solid Gainsboro;
   border-radius: 15rpx;
   width: 380rpx;
 }
 
 picker{
   position: relative;
-  border: 2rpx solid gray;
+  border: 2rpx solid Gainsboro;
   border-radius: 15rpx;
   width: 380rpx;
   height:60rpx;
 }
 
 textarea{
-  border: 2rpx solid gray;
+  border: 2rpx solid Gainsboro;
   border-radius: 15rpx;
   width: 560rpx;
   height: 450rpx;
-  margin-left: -40rpx;
+  margin-left: -60rpx;
+  padding: 20rpx;
 }
