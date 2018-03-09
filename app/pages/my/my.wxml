@@ -21,5 +21,4 @@
     <view class='border'></view>
 
     <button class='btn3' bindtap='searchResult'>查询面试结果</button>
-
 </view>

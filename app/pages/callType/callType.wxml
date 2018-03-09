@@ -9,3 +9,4 @@
 
 <text class='text1'>当前线上排队人数为：{{onlineNumber}}\n</text>
 <text class='text2'>当前现场排队人数为：{{presentNumber}}\n</text>
+
