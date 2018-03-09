@@ -10,7 +10,7 @@ picker{
   border-style: solid;
   border-color: #2780D6;
   border-width: 6rpx;
-  margin: 25rpx 30rpx 70rpx 30rpx;
+  margin: 25rpx 50rpx 70rpx 30rpx;
 }
 
 .triangle-flex{
@@ -83,7 +83,7 @@ picker{
 
 button{
   position: relative;
-  left: 10rpx;
+  left: 20rpx;
   background-color: white;
   height: 60rpx; 
   width: 175rpx;
@@ -130,5 +130,6 @@ textarea{
   border: 2rpx solid gray;
   border-radius: 15rpx;
   width: 560rpx;
-  margin-left: -30rpx;
+  height: 450rpx;
+  margin-left: -40rpx;
 }

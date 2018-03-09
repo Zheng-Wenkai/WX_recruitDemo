@@ -4,8 +4,9 @@
     <image class='img2' src='/image/callType1.jpg'></image>
 </view>
 
-<button class='button1' bindtap='onlineRange'>线上排队</button>
-<button class='button2' bindtap='presentRange'>现场排队</button>
+<view class='button1 btn' bindtap='onlineRange'>线上排队</view>
+<view class='button2 btn' bindtap='presentRange'>现场排队</view>
 
 <text class='text1'>当前线上排队人数为：{{onlineNumber}}\n</text>
 <text class='text2'>当前现场排队人数为：{{presentNumber}}\n</text>
+
