@@ -1,14 +1,110 @@
 <!--pages/search/search.wxml-->
-<input bindinput='getRange'></input>
-<button bindtap='searchForm'>查询</button>
-<image src="{{imageSrc}}"/>
-<text>{{info.fullName}}</text>
-<text>{{info.gender}}</text>
-<text>{{info.studentId}}</text>
-<text>{{info.major}}</text>
-<text>{{info.college}}</text>
-<text>{{info.departmentsA}}</text>
-<text>{{info.departmentsB}}</text>
-<text>{{info.phoneNumber}}</text>
-<text>{{info.location}}</text>
-<text>{{info.introduction}}</text>
+<!--  
+<view>
+  <input bindinput='getRange'></input>
+  <button bindtap='searchForm'>查询</button>
+  <image src="{{imageSrc}}"/>
+  <text>{{info.fullName}}</text>
+  <text>{{info.gender}}</text>
+  <text>{{info.studentId}}</text>
+  <text>{{info.major}}</text>
+  <text>{{info.college}}</text>
+  <text>{{info.departmentsA}}</text>
+  <text>{{info.departmentsB}}</text>
+  <text>{{info.phoneNumber}}</text>
+  <text>{{info.location}}</text>
+  <text>{{info.introduction}}</text>
+</view>
+-->
+
+<view class="search">
+  <button bindtap='searchForm'>
+  <image src="/image/search.png" style="height:50rpx;width:60rpx;position:relative;left:-30rpx;top:-10rpx;margin:0 0 0 0 "></image></button>
+  <input bindinput='getRange' placeholder="请输入编号"></input>
+</view>
+
+<view class="frame">
+  <view class="triangle-flex">
+    <view class="triangle-1"></view>
+    <view class="triangle-2"></view>
+  </view>
+
+  <view class="title">
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+    <view style="font-size:32rpx;margin:5rpx;font-family:Arial">编号 : 666</view>
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+    <view class="xiexian"></view>
+  </view>
+
+  <view class="photo">
+    <image src="../signForm/photo.png" style="height:250rpx;width:250rpx;margin-top:70rpx;margin-left:210rpx;"></image>
+  </view>
+
+<view style="height:50rpx;background:#2780D6;width:100%;margin-top:15rpx;"></view>
+
+  <view class="shuxian1"></view>
+  <view class="shuxian2"></view>
+  <view class="header">
+    <view>科科</view>
+    <view>男</view>
+    <view>201811110110</view>
+  </view>
+
+  <view class="major">
+    <image src="/image/major.png" style="height:55rpx;width:60rpx;margin:0rpx;"></image>
+    <view style='margin-left:40rpx;'>XXXX学院XXXX专业</view>
+  </view>
+
+  <view class="phone">
+    <image src="/image/phone.png" style="height:55rpx;width:60rpx;margin:0rpx;"></image>
+    <view style='margin-left:40rpx;'>13838387438</view>
+  </view>
+
+ <view class="items">
+  <view class="item" style="margin-left:-30rpx;">
+    <view>部门意愿1</view>
+    <view class="kuang">
+    <text>{{info.departmentsA}}</text>
+    </view>
+  </view>
+
+  <view class="item" style="margin-left:-30rpx;">
+    <view>部门意愿2</view>
+    <view class="kuang">
+    <text>{{info.departmentsB}}</text>
+    </view>
+  </view>
+
+  <view class="item" style="margin-left:-22rpx;">
+    <view>面试区域</view>
+    <view class="kuang" style='margin-left:20rpx;'>
+    <text>{{info.location}}</text>
+    </view>
+  </view>
+
+  <view class="item" style="margin-left:-22rpx;">
+    <view>面试时间</view>
+    <view class="kuang" style='margin-left:20rpx;'></view>
+  </view>
+ </view>
+
+  <view style='display:flex;margin-top:15rpx;margin-left:35rpx;align-items:center;'>
+    <view style="height:2rpx;background:#2780D6;width:200rpx;"></view>
+    <view style="margin:40rpx;  font-size: 28rpx;font-family: Arial;">个人简介</view>
+    <view style="height:2rpx;background:#2780D6;width:200rpx;"></view>
+  </view>
+ <view class="personal" name='introduction'>
+ <text style='padding-left:0rpx;'>{{info.introduction}}</text> 
+ </view>
+
+ <view class="triangle-flex;">
+   <view class="triangle-3"></view>
+   <view class="triangle-4"></view>
+</view>
+
+</view>

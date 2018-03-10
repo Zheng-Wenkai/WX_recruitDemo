@@ -1,1 +1,6 @@
-{}
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "现场排队",
+    "navigationBarTextStyle": "black"
+}

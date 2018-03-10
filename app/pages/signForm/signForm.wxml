@@ -87,7 +87,7 @@
   <view style="height:2rpx;background:#2780D6;width:200rpx;"></view>
 </view>
 
- <textarea name='introduction' />
+ <textarea name='introduction' maxlength='-1' />
 
 </form>
 </view>
