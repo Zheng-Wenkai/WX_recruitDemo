@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/signForm/signForm",
     "pages/callForm/callForm",
+    "pages/signType/signType",
+    "pages/search/search",
+    "pages/signForm/signForm",
+    "pages/index/index",
     "pages/inlogin/inlogin",
     "pages/perlogin/perlogin",
-    "pages/search/search",
-    "pages/signType/signType",
     "pages/callType/callType",
     "pages/my/my"
   ],
