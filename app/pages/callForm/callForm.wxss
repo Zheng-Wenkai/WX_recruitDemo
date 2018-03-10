@@ -1,22 +1,9 @@
 /* pages/callForm/callForm.wxss */
-.information{
-  height: 1016rpx;
-  width: 614rpx;
-  margin-left: 48rpx; 
-  margin-top: 50rpx;
-  padding: 20rpx;
-  border: 2rpx solid Gainsboro;
-  border-radius: 15rpx;
-}
-
-text{
-  word-break: break-all;
-}
 
 .button-list{
   display: flex;
   position: relative;
-  left: 60rpx;
+  left: 40rpx;
 }
 
 button{
@@ -32,4 +19,173 @@ button{
 
 button::after{
   border: 4rpx solid Gainsboro;
+}
+
+.frame{
+  border-style: solid;
+  border-color: #2780D6;
+  border-width: 6rpx;
+  margin: 40rpx 50rpx -20rpx 30rpx;
+}
+
+.triangle-flex{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.triangle-1{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+}
+
+.triangle-2{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(90deg)
+}
+
+.triangle-3{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(270deg)
+}
+
+.triangle-4{
+  height:0;
+  width:0;
+  overflow:hidden;
+  border-color:#2780D6 transparent transparent transparent;
+  border-style: solid;
+  border-width:75rpx 75rpx 0 0;
+  margin: 15rpx;
+  transform: rotate(180deg)
+}
+
+.title{
+  position: absolute;
+  top:140rpx;
+  left:135rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.xiexian{
+  height: 2rpx;
+  margin: -10rpx -10rpx;
+  background: #2780D6;
+  width: 60rpx;
+  transform: rotate(130deg)
+}
+
+.shuxian1{
+  position: absolute;
+  top:560rpx;
+  left:190rpx;
+  height: 5rpx;
+  margin: -10rpx -10rpx;
+  background: #2780D6;
+  width: 100rpx;
+  transform: rotate(90deg)
+}
+
+.shuxian2{
+  position: absolute;
+  top: 559rpx;
+  left:300rpx;
+  height: 5rpx;
+  margin: -10rpx -10rpx;
+  background: #2780D6;
+  width: 95rpx;
+  transform: rotate(90deg)
+}
+
+input{
+  border: 1rpx dotted gray;
+  border-radius: 15rpx;
+  height:60rpx;
+  width:550rpx;
+  margin-left: -70rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+
+.header{
+  display: flex;
+  flex-direction: row; 
+  position: relative;
+  margin-top: 10rpx;
+  left: 30rpx;
+  font-size :28rpx;
+  font-family: Arial;
+  align-items: center;
+}
+.header view{
+    margin-left: 75rpx;
+}
+
+.major{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+  margin-left: 120rpx;
+  font-size :28rpx;
+  font-family: Arial;
+}
+.phone{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 120rpx;
+  font-size :28rpx;
+  font-family: Arial;
+}
+
+.items{
+  position: relative;
+  left: 80rpx;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx; 
+  font-size: 28rpx;
+  font-family: Arial;
+  font-weight: 600;
+}
+
+
+.kuang{
+  display: flex;
+  align-items: center;
+  margin-left:12rpx;
+  border: 2rpx solid Gainsboro;
+  border-radius: 15rpx;
+  height: 60rpx;
+  width: 380rpx;
+}
+
+text{
+  padding:20rpx;
+  overflow-wrap: normal;
+  word-break:break-all;
 }
