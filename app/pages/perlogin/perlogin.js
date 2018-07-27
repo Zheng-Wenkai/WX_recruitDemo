@@ -32,7 +32,7 @@ Page({
     if (app.globalData.userInfo.username == 'personel' && app.globalData.userInfo.password == 'aie2018!') {
       util.showSuccess('登录成功');
       wx.redirectTo({
-        url: '../callType/callType',
+        url: '../callForm/callForm',
       })
     }
     else {

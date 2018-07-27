@@ -80,12 +80,12 @@
     </view>
   </view>
 
-  <view class="item" style="margin-left:-22rpx;">
+  <!-- <view class="item" style="margin-left:-22rpx;">
     <view>面试区域</view>
     <view class="kuang" style='margin-left:20rpx;'>
     <text>{{info.location}}</text>
     </view>
-  </view>
+  </view> -->
 
   <view class="item" style="margin-left:-22rpx;">
     <view>面试时间</view>

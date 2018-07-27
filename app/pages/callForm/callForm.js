@@ -19,12 +19,12 @@ Page({
   },
   callForm: function () {
     var that = this;
-    console.log(app.globalData.callType);
+    // console.log(app.globalData.callType);
     wx.request({
       url: 'http://localhost:7010/callForm/',
       method: 'GET',
       data: {
-        callType: app.globalData.callType
+        // callType: app.globalData.callType
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -74,15 +74,14 @@ Page({
       },
     })
   },
-  isInterview: function () {
+  bePresent: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:7010/isInterview',
+      url: 'http://localhost:7010/bePresent',
       method: 'POST',
       data: {
         range: that.data.info.range,
-        callType: app.globalData.callType,
-
+        // callType: app.globalData.callType,
       },
       header: {
         'content-type': 'application/json'
@@ -96,15 +95,14 @@ Page({
       }
     })
   },
-  notInterview: function () {
+  notBePresent: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:7010/notInterview',
+      url: 'http://localhost:7010/notBePresent',
       method: 'POST',
       data: {
         range: that.data.info.range,
-        callType: app.globalData.callType,
-
+        // callType: app.globalData.callType,
       },
       header: {
         'content-type': 'application/json'
@@ -118,28 +116,28 @@ Page({
       }
     })
   },
-  isInterviewConfirm:function(){
+  bePresentConfirm:function(){
     var that=this;
     wx.showModal({
       content: '确认已到场？',
       success: function (res) {
         if (res.confirm) {
           console.log('用户点击确定');
-          that.isInterview()
+          that.bePresent()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
   },
-  notInterviewConfirm:function(){
+  notBePresentConfirm:function(){
     var that=this;
     wx.showModal({
       content: '确认未到场？',
       success: function (res) {
         if (res.confirm) {
           console.log('用户点击确定');
-          that.notInterview()
+          that.notBePresent()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

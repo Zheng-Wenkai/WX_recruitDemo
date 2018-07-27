@@ -6,8 +6,8 @@ module.exports = function () {
     var db = mongoose.connect(config.mongodb);
     // 定义model
     var SignSchema = new mongoose.Schema({
-        openId: String,
-        range: Number,
+        openId: String,// 用户的唯一标识符
+        range: Number,// 编号
 
         fullName: String,
         studentId: String,
@@ -20,39 +20,13 @@ module.exports = function () {
         departmentsA: String,
         departmentsB: String,
 
-        timeSlot: Number,
-        interviewResult: Number,
-        isInterview: Number,
-        signWay: Number,
-        regTime: String
+        timeSlot: Number,//时间段
+        interviewResult: Number,//面试结果
+        isInterview: Number,//是否已面试
+        signTime: String//报名时间
     });
     // 创建model
-    mongoose.model('Sign', SignSchema);
-
-    // 定义model
-    var SignSchema2 = new mongoose.Schema({
-        openId: String,
-        range: Number,
-
-        fullName: String,
-        studentId: String,
-        major: String,
-        phoneNumber: String,
-        introduction: Object,
-        college: String,
-        gender: String,
-        location: String,
-        departmentsA: String,
-        departmentsB: String,
-
-        timeSlot: Number,
-        interviewResult: Number,
-        isInterview: Number,
-        signWay: Number,
-        regTime: String
-    });
-    // 创建model
-    mongoose.model('Sign2', SignSchema2);
-    console.log("build sign model success")
+    mongoose.model('signModel', SignSchema);
+    console.log("build sign model success");
     return db;
-}
+};

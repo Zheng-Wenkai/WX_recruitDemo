@@ -14,16 +14,16 @@
 
     <view class='content'>
         <view class='img-top'>
-            <view class='button1 btn' bindtap='signClick'>报名</view>
-            <image src='/image/index2.jpg'></image>
+            <view class='button1 btn'>报名</view>
+            <image src='/image/index2.jpg' bindtap='signClick'></image>
         </view>
         <view class='img'>
-            <view class='button2 btn' bindtap='interviewClick'>面试官</view>
-            <image src='/image/index3.jpg'></image>
+            <view class='button2 btn'>面试官</view>
+            <image src='/image/index3.jpg' bindtap='interviewClick'></image>
         </view>
         <view class='img'>
-            <view class='button3 btn' bindtap='personelClick'>工作人员</view>
-            <image src='/image/index4.jpg'></image>
+            <view class='button3 btn'>工作人员</view>
+            <image src='/image/index4.jpg' bindtap='personelClick'></image>
         </view>
     </view>
 

@@ -68,7 +68,7 @@ Page({
   },
   signClick:function(){
       wx.navigateTo({
-        url: '../signType/signType',
+        url: '../signForm/signForm',
       })
   },
   interviewClick: function () {

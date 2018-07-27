@@ -73,7 +73,7 @@ picker{
   flex-direction: row;
 }
 
-.xiexian{
+.line{
   height: 2rpx;
   margin: -10rpx -10rpx;
   background: #2780D6;

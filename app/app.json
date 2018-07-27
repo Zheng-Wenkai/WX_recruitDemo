@@ -1,13 +1,11 @@
 {
   "pages": [
-    "pages/callForm/callForm",
-    "pages/signType/signType",
-    "pages/search/search",
-    "pages/signForm/signForm",
     "pages/index/index",
+    "pages/search/search",
+    "pages/callForm/callForm",
+    "pages/signForm/signForm",
     "pages/inlogin/inlogin",
     "pages/perlogin/perlogin",
-    "pages/callType/callType",
     "pages/my/my"
   ],
   "window": {

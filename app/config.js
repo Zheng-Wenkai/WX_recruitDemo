@@ -1,9 +1,7 @@
 /**
  * 小程序配置文件
  */
-
-// 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://c0yeame9.qcloud.la';
+var host = 'http://localhost:7010';
 
 var config = {
 
@@ -12,7 +10,7 @@ var config = {
         host,
 
         // 登录地址，用于建立会话
-        loginUrl: `${host}/weapp/login`,
+        loginUrl: `${host}/login`,
 
         // 测试的请求地址，用于测试会话
         requestUrl: `${host}/weapp/user`,

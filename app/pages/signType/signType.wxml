@@ -1,9 +1,0 @@
-<!--报名类型-->
-
-<view class='container'>
-    <image class='img1' src='/image/signType1.jpg'></image>
-    <image class='img2' src='/image/signType2.jpg'></image>
-</view>
-
-<view class='button1 btn' bindtap='onlineSign'>线上报名</view>
-<view class='button2 btn' bindtap='presentSign'>现场报名</view>

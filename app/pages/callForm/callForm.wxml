@@ -92,6 +92,6 @@
 </view>
 
 <view class="button-list">
-  <button bindtap='isInterviewConfirm'>已到场</button>
-  <button bindtap='notInterviewConfirm'>未到场</button>
+  <button bindtap='bePresent'>已到场</button>
+  <button bindtap='notBePresent'>未到场</button>
 </view>
