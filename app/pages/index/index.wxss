@@ -1,81 +1,19 @@
-swiper {
-    width: 100%;
-    height: 440rpx;
-    margin-bottom: 74rpx;
-}
-
-swiper image {
-    height: 440rpx;
-    width: 100%;
-}
-
-button {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.0);
-    width: 230rpx;
-    height: 50rpx;
-    line-height: 50rpx;
-    color: #fff;
-    font-size: 40rpx;
-    font-family: Arial;
-}
-
-.button1 {
-    top: 560rpx;
-    left: 50rpx;
-}
-
-.button2 {
-    top: 855rpx;
-    left: 70rpx;
-}
-
-.button3 {
-    top: 1140rpx;
-    left: 90rpx;
-}
-
-.content {
-    padding-left: 40rpx;
-    padding-right: 40rpx;
-    border-left: 2rpx solid #ddd;
-}
-
-.img-top {
-    margin-top: 25rpx;
-}
-
 .img {
-    margin-top: 60rpx;
-    margin-bottom: 60rpx;
+    width: 100%;
+    height: 300rpx;
+    margin-bottom: 40rpx;
 }
 
-.img image, .img-top image {
-    width: 580rpx;
-    height: 220rpx;
-    border-radius: 80rpx;
+.img_top {
+    width: 100%;
+    height: 300rpx;
+    margin-bottom: 40rpx;
+    margin-top: 55rpx;
 }
 
-.border1{
-    border-top: 2rpx solid #ddd;
-    width: 42rpx;
-    position: absolute;
-    top: 645rpx;
-    left: 45rpx;
-}
-
-.border2{
-    border-top: 2rpx solid #ddd;
-    width: 42rpx;
-    position: absolute;
-    top: 940rpx;
-    left: 45rpx;
-}
-
-.border3{
-    border-top: 2rpx solid #ddd;
-    width: 42rpx;
-    position: absolute;
-    top: 1225rpx;
-    left: 45rpx;
+.dashed{
+    position: fixed;
+    width: 100%;
+    height: 100rpx;
+    margin-top: -85rpx;
 }

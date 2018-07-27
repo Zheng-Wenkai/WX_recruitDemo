@@ -1,5 +1,7 @@
 {
-    "backgroundTextStyle": "light",
-    "navigationBarTitleText": "个人页面",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black"
 }
+
+
+

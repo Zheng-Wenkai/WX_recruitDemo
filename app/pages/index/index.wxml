@@ -1,4 +1,15 @@
+
 <!-- 首页 -->
+<view class='container'>
+    <image class='dashed' src="/images/index/dashed.png" bindtap='turnToSign'></image>
+    <image class='img_top' src="/images/index/introduction.jpg" bindtap='turnToMap'></image>
+    <image class='img' src="/images/index/story.jpg" bindtap='turnToMap'></image>
+    <image class='img' src="/images/index/apply.jpg" bindtap='signClick'></image>
+    <image class='img' src="/images/index/interviewer.jpg" bindtap='interviewClick'></image>
+    <image class='img' src="/images/index/staff.jpg" bindtap='personelClick'></image>
+</view>
+
+ <!-- 首页 
 <view class='container'>
     <swiper indicator-dots='true' autoplay='true' interval='5000' indicator-color='rgba(2, 0, 0, .3)' indicator-active-color='rgba(255, 255, 255, .8)'>
         <swiper-item>
@@ -30,4 +41,4 @@
     <view class='border1'></view>
     <view class='border2'></view>
     <view class='border3'></view>
-</view>
+</view> -->
