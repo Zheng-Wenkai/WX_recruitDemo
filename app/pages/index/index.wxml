@@ -1,12 +1,11 @@
-
 <!-- 首页 -->
 <view class='container'>
-    <image class='dashed' src="/images/index/dashed.png" bindtap='turnToSign'></image>
+    <image class='dashed' src="/images/index/dashed.png" bindtap='turnToStaff'></image>
     <image class='img_top' src="/images/index/introduction.jpg" bindtap='turnToMap'></image>
     <image class='img' src="/images/index/story.jpg" bindtap='turnToMap'></image>
-    <image class='img' src="/images/index/apply.jpg" bindtap='signClick'></image>
-    <image class='img' src="/images/index/interviewer.jpg" bindtap='interviewClick'></image>
-    <image class='img' src="/images/index/staff.jpg" bindtap='personelClick'></image>
+    <image class='img_bottom' src="/images/index/apply.jpg" bindtap='signClick'></image>
+    <!-- <image class='img' src="/images/index/interviewer.jpg" bindtap='interviewClick'></image>
+    <image class='img' src="/images/index/staff.jpg" bindtap='personelClick'></image> -->
 </view>
 
  <!-- 首页 

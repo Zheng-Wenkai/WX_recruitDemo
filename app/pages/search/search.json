@@ -1,1 +1,5 @@
-{}
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "查询",
+    "navigationBarTextStyle": "black"
+}

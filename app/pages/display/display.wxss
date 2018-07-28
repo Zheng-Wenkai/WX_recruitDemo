@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+}
+
+.background_img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.img{
+    width: 300rpx;
+    height: 320rpx;
+    
+    margin-left: rpx;
+    margin-top: -49rpx;
+    z-index: 99;
+}
+
+.work{
+    width: 300rpx;
+    height: 320rpx;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    z-index: 88;
+    position: absolute;
+}
+
+.work_text{
+    position: relative;
+    top: 135rpx;
+    left: 100rpx;
+    font-size: 16px;
+}
+
+.work1{
+    transform: rotate(5deg);
+    top:80rpx;
+    left: 40rpx;
+}
+
+.work2{
+    top:160rpx;
+    left: 400rpx;
+}
+
+.work3{
+    transform: rotate(-5deg);
+    top:460rpx;
+    left: 20rpx;
+}
+
+.work4{
+    transform: rotate(5deg);
+    top:600rpx;
+    left: 420rpx;
+}
+
+.work5{
+    transform: rotate(-3deg);
+    top:840rpx;
+    left: 80rpx;
+}

@@ -1,0 +1,29 @@
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+
+    <view class='work work1'>
+        <text class='work_text'>作品A</text>
+        <image class='img' src="{{isUploadedImg ? work[0] : ''}}"></image>
+    </view>
+    
+    <view class='work work2'>
+        <text class='work_text'>作品B</text>
+        <image class='img' src="{{isUploadedImg ? work[1] : ''}}"></image>
+    </view>
+
+    <view class='work work3'>
+        <text class='work_text'>作品C</text>
+        <image class='img' src="{{isUploadedImg ? work[2] : ''}}"></image>
+    </view>
+
+    <view class='work work4'>
+        <text class='work_text'>作品D</text>
+        <image class='img' src="{{isUploadedImg ? work[3] : ''}}"></image>
+    </view>
+    <view class='work work5'>
+        <text class='work_text'>作品E</text>
+        <image class='img' src="{{isUploadedImg ? work[4] : ''}}"></image>
+    </view>
+    
+</view>

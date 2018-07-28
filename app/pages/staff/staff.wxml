@@ -1,0 +1,5 @@
+<view class='container'>
+    <image class='dashed' src="/images/index/dashed.png" bindtap='turnToIndex'></image>
+    <image class='img_top' src="/images/index/interviewer.jpg" bindtap='interviewClick'></image>
+    <image class='img' src="/images/index/staff.jpg" bindtap='personelClick'></image>
+</view>

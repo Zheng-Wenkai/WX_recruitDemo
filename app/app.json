@@ -1,14 +1,22 @@
 {
     "pages": [
-        "pages/my/my",
         "pages/index/index",
-        "pages/callType/callType",
+        "pages/display/display",
+        "pages/callForm/callForm",
+        "pages/department/department",
         "pages/search/search",
-        "pages/signType/signType",
+        
+        
+        
         "pages/signForm/signForm",
+        
+       
+        "pages/my/my",
+        "pages/staff/staff",
+        "pages/callType/callType",
+        "pages/signType/signType",
         "pages/perlogin/perlogin",
-        "pages/inlogin/inlogin",
-        "pages/callForm/callForm"
+        "pages/inlogin/inlogin"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -18,7 +26,7 @@
     },
     "tabBar": {
         "backgroundColor": "#fff",
-        "selectedColor": "#008eff",
+        "selectedColor": "#80c1f2",
         "color": "#989898",
         "list": [
             {
@@ -30,8 +38,8 @@
             {
                 "pagePath": "pages/my/my",
                 "text": "我的",
-                "iconPath": "images/tab/me.png",
-                "selectedIconPath": "images/tab/me_hl.png"
+                "iconPath": "images/tab/my.png",
+                "selectedIconPath": "images/tab/my_hl.png"
             }
         ]
     }

@@ -1,5 +1,53 @@
 <!--pages/search/search.wxml-->
-<input bindinput='getRange'></input>
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+
+    <view class='search'>
+        <icon class='icon_left' type='search' size='13' color='#405f80' />
+        <input type='text' placeholder='请输入编号' placeholder-class='placeholder' bindfocus='onBindFoucs' bindconfirm='onBindconfirm'></input>
+        <icon class='icon_right' wx:if="{{searchPanelShow}}" type='clear' size='15' bindtap='onCancelImgTap' />
+    </view>
+
+    <!-- 上传图片后加载用户图片，否则加载科科-->
+    <image class='avatar' src="{{imageSrc ? avatar : '/images/my/avatar.png'}}"></image>
+
+
+    <view class='ipt top'>
+        <text>姓名  {{info.fullName}}</text>
+    </view>
+    <view class="ipt">
+        <text>性别  {{info.gender}}</text>
+    </view>
+    <view class="ipt">
+        <text>学院  {{info.college}}</text>
+    </view>
+    <view class="ipt">
+        <text>专业  {{info.major}}</text>
+    </view>
+    <view class="ipt">
+        <text>电话  {{info.phoneNumber}}</text>
+    </view>
+    <view class="ipt">
+        <text>部门意愿一  {{info.departmentsA}}</text>
+    </view>
+    <view class="ipt">
+        <text>部门意愿二  {{info.departmentsB}}</text>
+    </view>
+    <view class="ipt">
+        <!-- 面试时间 -->
+        <text>面试时间  {{info.interviewTime}}</text>
+    </view>
+    <view class='ipt'>
+        <text class='introduction'>个人简介：{{info.introduction}}</text>
+    </view>
+
+    <!-- 查看作品 -->
+    <button bindtap="uploadPic" class='btn'>查看作品</button>
+
+</view>
+
+<!-- <input bindinput='getRange'></input>
 <button bindtap='searchForm'>查询</button>
 <image src="{{imageSrc}}"/>
 <text>{{info.fullName}}</text>
@@ -11,4 +59,4 @@
 <text>{{info.departmentsB}}</text>
 <text>{{info.phoneNumber}}</text>
 <text>{{info.location}}</text>
-<text>{{info.introduction}}</text>
+<text>{{info.introduction}}</text> -->

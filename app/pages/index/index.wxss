@@ -1,14 +1,19 @@
 .img {
     width: 100%;
     height: 300rpx;
-    margin-bottom: 40rpx;
+    margin-bottom: 55rpx;
 }
 
 .img_top {
     width: 100%;
     height: 300rpx;
-    margin-bottom: 40rpx;
+    margin-bottom: 55rpx;
     margin-top: 55rpx;
+}
+
+.img_bottom {
+    width: 100%;
+    height: 300rpx;
 }
 
 .dashed{

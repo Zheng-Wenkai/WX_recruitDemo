@@ -1,5 +1,51 @@
-<!--pages/callForm/callForm.wxml-->
-<image src="{{imageSrc}}"/>
+<!--pages/search/search.wxml-->
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+
+    <!-- 上传图片后加载用户图片，否则加载科科-->
+    <!-- <image class='avatar' src="{{imageSrc ? avatar : '/images/my/avatar.png'}}"></image> -->
+    <!-- 临时语句↓，修改js后请删除 -->
+    <image class='avatar' src="/images/my/avatar.png"></image>
+
+    <view class='ipt top'>
+        <text>姓名  {{info.fullName}}</text>
+    </view>
+    <view class="ipt">
+        <text>性别  {{info.gender}}</text>
+    </view>
+    <view class="ipt">
+        <text>学院  {{info.college}}</text>
+    </view>
+    <view class="ipt">
+        <text>专业  {{info.major}}</text>
+    </view>
+    <view class="ipt">
+        <text>电话  {{info.phoneNumber}}</text>
+    </view>
+    <view class="ipt">
+        <text>部门意愿一  {{info.departmentsA}}</text>
+    </view>
+    <view class="ipt">
+        <text>部门意愿二  {{info.departmentsB}}</text>
+    </view>
+    <view class="ipt">
+        <!-- 面试时间 -->
+        <text>面试时间  {{info.interviewTime}}</text>
+    </view>
+    <view class='ipt'>
+        <!-- 个人简介 -->
+        <text class='introduction'>个人简介：{{info.introduction}}</text>
+    </view>
+    <!-- 查看作品 -->
+    <view class='btn_container'>
+        <button bindtap='isInterviewConfirm'>已到场</button>
+        <button bindtap='notInterviewConfirm'>未到场</button>
+    </view>
+
+</view>
+
+<!-- <image src="{{imageSrc}}"/>
 <text>{{info.fullName}}</text>
 <text>{{info.gender}}</text>
 <text>{{info.studentId}}</text>
@@ -11,4 +57,4 @@
 <text>{{info.location}}</text>
 <text>{{info.introduction}}</text>
 <button bindtap='isInterviewConfirm'>已到场</button>
-<button bindtap='notInterviewConfirm'>未到场</button>
+<button bindtap='notInterviewConfirm'>未到场</button> -->

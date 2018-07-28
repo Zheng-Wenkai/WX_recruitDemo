@@ -68,7 +68,7 @@ button {
 }
 
 .btn3 {
-    margin-top: 50rpx;
+    margin-top: 80rpx;
     width: 228rpx;
 }
 
@@ -76,6 +76,20 @@ button {
     border: 5rpx solid #f6f6f6;
     width: 100%;
     color: #101010;
+}
+
+.dashed_white {
+    position: absolute;
+    top: 105rpx;
+    width: 745rpx;
+    height: 280rpx;
+}
+
+.dashed_blue {
+    position: absolute;
+    top: 630rpx;
+    width: 745rpx;
+    height: 280rpx;
 }
 
 .dashed{

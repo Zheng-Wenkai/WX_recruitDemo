@@ -8,7 +8,7 @@ Page({
    */
   data: {
     info: [],
-    imageSrc: '../../image/login.jpg'//设置默认图片
+    imageSrc: '../../images/my/avatar.png'//设置默认图片
   },
 
   /**
