@@ -1,33 +1,7 @@
 <!-- 首页 -->
 <view class='container'>
-    <swiper indicator-dots='true' autoplay='true' interval='5000' indicator-color='rgba(2, 0, 0, .3)' indicator-active-color='rgba(255, 255, 255, .8)'>
-        <swiper-item>
-            <image src='/image/carousel1.jpg'> </image>
-        </swiper-item>
-        <swiper-item>
-            <image src='/image/carousel2.jpg'></image>
-        </swiper-item>
-        <swiper-item>
-            <image src='/image/carousel3.jpg'></image>
-        </swiper-item>
-    </swiper>
-
-    <view class='content'>
-        <view class='img-top'>
-            <view class='button1 btn'>报名</view>
-            <image src='/image/index2.jpg' bindtap='signClick'></image>
-        </view>
-        <view class='img'>
-            <view class='button2 btn'>面试官</view>
-            <image src='/image/index3.jpg' bindtap='interviewClick'></image>
-        </view>
-        <view class='img'>
-            <view class='button3 btn'>工作人员</view>
-            <image src='/image/index4.jpg' bindtap='personelClick'></image>
-        </view>
-    </view>
-
-    <view class='border1'></view>
-    <view class='border2'></view>
-    <view class='border3'></view>
+    <image class='dashed' src="/images/index/dashed.png" bindtap='turnToStaff' ></image>
+    <image class='img_top' src="/images/index/introduction.jpg" bindtap='turnToIntroduction'></image>
+    <image class='img' src="/images/index/story.jpg" bindtap='turnToStory'></image>
+    <image class='img_bottom' src="/images/index/apply.jpg" bindtap='turnToSign'></image>
 </view>

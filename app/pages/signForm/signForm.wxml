@@ -1,102 +1,58 @@
 <!--报名表单-->
-<view class="frame">
-  <view class="triangle-flex">
-    <view class="triangle-1"></view>
-    <view class="triangle-2"></view>
-  </view>
+<view class='container'>
 
-  <view class="title">
-    <view class="line"></view>
-    <view class="line"></view>
-    <view class="line"></view>
-    <view class="line"></view>
-    <view style="font-size:36rpx;margin:25rpx">报名表</view>
-    <view class="line"></view>
-    <view class="line"></view>
-    <view class="line"></view>
-    <view class="line"></view>
-  </view>
+  <image class='background_img' src='/images/my/background.jpg'></image>
 
-  <view class="photo">
-    <image src="../../image/index1.jpg" style="height:250rpx;width:250rpx;margin-top:70rpx;margin-left:225rpx;"></image>
-    <button bindtap="uploadPic" style="margin-top:18rpx;">
-      <text>上传照片</text>
-    </button>
-  </view>
-
-  <view style="height:50rpx;background:#2780D6;width:100%;margin-top:15rpx;"></view>
-
+  <!-- 上传图片后加载用户图片，否则加载科科 -->
+  <image class='avatar' src="{{isuploadpic ? avatar : '/images/my/avatar.png'}}"></image>
   <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class="information">
-      <view class="item">
-        <view>姓名</view>
-        <input name="fullName" />
-      </view>
-
-      <view class="item">
-        <view>性别</view>
-        <picker value="{{xingbie}}" range="{{gender}}" name="xingbie" bindchange='bindGenderChange'>
-          <text style="position:relative;left:-1000rpx;">1</text>{{gender[xingbie]}}
-        </picker>
-      </view>
-
-      <view class="item">
-        <view>学院</view>
-        <picker value="{{xueyuan}}" range="{{college}}" name="xueyuan" bindchange='bindCollegeChange'>
-          <text style="position:relative;left:-1000rpx;">1</text>{{college[xueyuan]}}
-        </picker>
-      </view>
-
-      <view class="item">
-        <view>专业</view>
-        <input name="major" />
-      </view>
-
-      <view class="item">
-        <view>学号</view>
-        <input name="studentId" bindinput='getstudentId' type="number" />
-      </view>
-
-      <view class="item">
-        <view>电话</view>
-        <input name="phoneNumber" type="number" />
-      </view>
-
-      <view class="item" style="margin-left:-30rpx;">
-        <view>部门意愿1</view>
-        <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange' style="margin-left:18rpx;">
-          <text style="position:relative;left:-1000rpx;">1</text>{{departments[wishA]}}
-        </picker>
-      </view>
-
-      <view class="item" style="margin-left:-30rpx;">
-        <view>部门意愿2</view>
-        <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange' style="margin-left:18rpx;">
-          <text style="position:relative;left:-1000rpx;">1</text>{{departments[wishB]}}
-        </picker>
-      </view>
-
-      <!-- <view class="item" style="margin-left:-22rpx;">
-        <view>面试区域</view>
-        <picker value="{{quyu}}" range="{{location}}" name="quyu" bindchange='bindLocationChange' style="margin-left:27rpx;">
-          <text style="position:relative;left:-1000rpx;">1</text>{{location[quyu]}}
-        </picker>
-      </view> -->
-
-      <view style='display:flex;margin-top:40rpx;margin-left:-60rpx;align-items:center;'>
-        <view style="height:2rpx;background:#2780D6;width:200rpx;"></view>
-        <view style="margin:40rpx;">个人简介</view>
-        <view style="height:2rpx;background:#2780D6;width:200rpx;"></view>
-      </view>
-
-      <textarea name='introduction' maxlength='-1' />
-
+    <view class='ipt top'>
+      <view class='hint'>姓名</view>
+      <input name="fullName" />
+    </view>
+    <view class="ipt">
+      <picker value="{{xingbie}}" range="{{gender}}" name="xingbie" bindchange='bindGenderChange'>
+        性别 {{gender[xingbie]}}
+      </picker>
+    </view>
+    <view class="ipt">
+      <picker value="{{xueyuan}}" range="{{college}}" name="xueyuan" bindchange='bindCollegeChange'>
+        学院 {{college[xueyuan]}}
+      </picker>
+    </view>
+    <view class="ipt">
+      <view class='hint'>专业</view>
+      <input name="major" />
+    </view>
+    <view class="ipt">
+      <view class='hint'>电话</view>
+      <input name="phoneNumber" type="number" bindchange='bindPhoneNumberChange' />
+    </view>
+    <view class="ipt">
+      <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
+        部门意愿一 {{departments[wishA]}}
+      </picker>
+    </view>
+    <view class="ipt">
+      <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange'>
+        部门意愿二 {{departments[wishB]}}
+      </picker>
+    </view>
+    <view class="ipt">
+      <!-- 面试时间 -->
+      <picker value="{{shijian}}" range="{{timeSlot}}" name="shijian" bindchange='bindTimeSlotChange'>
+        面试时间 {{timeSlot[shijian]}}
+      </picker>
+    </view>
+    <view class='ipt'>
+      <!-- 个人简介最长给300个汉字 -->
+      <textarea name='introduction' placeholder='个人简介：' maxlength='600' />
     </view>
 
-    <view class="triangle-flex;">
-      <view class="triangle-3"></view>
-      <button formType="submit">提交表格</button>
-      <view class="triangle-4"></view>
-    </view>
+    <button formType="submit" class='btn3'>提交</button>
   </form>
+  <view class='btn_content'>
+    <button bindtap="uploadPic" class='btn1'>上传照片</button>
+    <button bindtap="uploadWork" class='btn2'>上传作品</button>
+  </view>
 </view>

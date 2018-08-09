@@ -1,0 +1,24 @@
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+
+    <!-- 上传图片后加载用户图片，否则加载科科 -->
+    <image class='avatar' src="{{isUploadedImg ? avatar : '/images/my/avatar.png'}}"></image>
+
+     <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="ipt">
+            <!-- 面试时间 -->
+            <picker class='picker1' value="{{shijian}}" range="{{timeSlot}}" name="shijian" bindchange='bindTimeSlotChange'>
+                面试时间 : {{timeSlot[shijian]}}
+            </picker>
+        </view>
+        <view class="ipt">
+            <!-- 部门选择 -->
+            <picker class='picker2' value="{{index}}" range="{{departments}}" name="index" bindchange='bindDepartChange'>
+                部门选择  : {{departments[index]}}
+            </picker>
+        </view>
+         <button formType="submit">确定</button>
+    </form> 
+    
+</view>

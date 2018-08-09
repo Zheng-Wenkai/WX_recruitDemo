@@ -1,141 +1,113 @@
-view{
-  font-size: 28rpx;
+.container {
+  width: 100%;
 }
 
-picker{
-  font-size: 28rpx;
-}
-
-.frame{
-  border-style: solid;
-  border-color: #2780D6;
-  border-width: 6rpx;
-  margin: 25rpx 50rpx 70rpx 30rpx;
-}
-
-.triangle-flex{
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.triangle-1{
-  height:0;
-  width:0;
-  overflow:hidden;
-  border-color:#2780D6 transparent transparent transparent;
-  border-style: solid;
-  border-width:75rpx 75rpx 0 0;
-  margin: 15rpx;
-}
-
-.triangle-2{
-  height:0;
-  width:0;
-  overflow:hidden;
-  border-color:#2780D6 transparent transparent transparent;
-  border-style: solid;
-  border-width:75rpx 75rpx 0 0;
-  margin: 15rpx;
-  transform: rotate(90deg)
-}
-
-.triangle-3{
-  height:0;
-  width:0;
-  overflow:hidden;
-  border-color:#2780D6 transparent transparent transparent;
-  border-style: solid;
-  border-width:75rpx 75rpx 0 0;
-  margin: 15rpx;
-  transform: rotate(270deg)
-}
-
-.triangle-4{
-  height:0;
-  width:0;
-  overflow:hidden;
-  border-color:#2780D6 transparent transparent transparent;
-  border-style: solid;
-  border-width:75rpx 75rpx 0 0;
-  margin: 15rpx;
-  transform: rotate(180deg)
-}
-
-.title{
+.background_img {
+  width: 100%;
   position: absolute;
-  top:90rpx;
-  left:150rpx;
+  height: 1680rpx;
+}
+
+.avatar {
+  height: 170rpx;
+  width: 170rpx;
+  position: absolute;
+  left: 290rpx;
+  top: 50rpx;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
+button {
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  font-family: Microsoft Yahei;
+  color: rgba(16, 16, 16, 0.8);
+  border: 3rpx solid #aaa;
+  background-color: #fff;
+}
+
+.btn_content {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   flex-direction: row;
 }
 
-.line{
-  height: 2rpx;
-  margin: -10rpx -10rpx;
-  background: #2780D6;
-  width: 60rpx;
-  transform: rotate(130deg)
+.btn1 {
+  margin-top: -600rpx;
+  margin-right: 100rpx;
 }
 
-button{
-  position: relative;
-  left: 20rpx;
-  background-color: white;
-  height: 60rpx; 
+.btn2 {
+  margin-top: -600rpx;
+}
+
+.btn3 {
+  margin-top: -80rpx;
+  padding-left: 40rpx;
+  letter-spacing: 20rpx;
   width: 175rpx;
-  font-size: 28rpx;
-  line-height: 60rpx;
 }
 
-button::after{
-  border: 4rpx solid Gainsboro;
-}
-
-.information{
-  position: relative;
-  left:90rpx;
-}
-
-.item{
-  display: flex;
-  align-items: center;
-  margin-top: 40rpx; 
-}
-.item view{
-    font-weight: 600;
-}
-.item input{
-  margin-left:60rpx;
-  padding-left: 30rpx;
-}
-.item picker{
-  margin-left:60rpx;
+input, picker {
+  width: 600rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: left;
   padding-left: 20rpx;
+  background: #fff;
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  border: 3rpx solid #c9b1b1;
+  margin: 10rpx auto;
+  z-index: 88;
 }
 
-input{
-  border: 2rpx solid Gainsboro;
-  border-radius: 15rpx;
-  width: 380rpx;
+picker {
+  padding-left: 15rpx;
+  width: 605rpx;
 }
 
-picker{
-  position: relative;
-  border: 2rpx solid Gainsboro;
-  border-radius: 15rpx;
-  width: 380rpx;
-  height:60rpx;
+input {
+  padding-left: 93rpx;
+  width: 527rpx;
 }
 
-textarea{
-  border: 2rpx solid Gainsboro;
-  border-radius: 15rpx;
-  width: 560rpx;
-  height: 450rpx;
-  margin-left: -60rpx;
-  padding: 20rpx;
+.ipt {
+  display: flex;
+}
+
+.top {
+  margin-top: 270rpx;
+}
+
+.hint {
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  position: absolute;
+  margin-left: 25rpx;
+  margin-top: 11rpx;
+  z-index: 999;
+}
+
+textarea {
+  margin: 120rpx auto;
+  width: 600rpx;
+  height: 400rpx;
+  border: 3rpx solid #c9b1b1;
+  z-index: 88;
+  line-height: 48rpx;
+  text-align: left;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background: #fff;
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  border-radius: 20rpx;
 }

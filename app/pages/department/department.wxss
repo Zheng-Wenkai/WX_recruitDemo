@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+}
+
+.background_img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.avatar {
+    height: 170rpx;
+    width: 170rpx;
+    position: absolute;
+    left: 290rpx;
+    top: 250rpx;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+button {
+    height: 60rpx;
+    width: 180rpx;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    font-family: Microsoft Yahei;
+    color: rgba(16, 16, 16, 0.8);
+    border: 3rpx solid #aaa;
+    background-color: #fff;
+    margin-top: 50rpx;
+    padding-left: 40rpx;
+    letter-spacing: 20rpx;
+}
+
+picker {
+    width: 400rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: left;
+    padding-left: 20rpx;
+    background: #fff;
+    color: rgba(16, 16, 16, 0.8);
+    font-size: 16px;
+    border-radius: 20rpx;
+    border: 3rpx solid #c9b1b1;
+    margin: 10rpx auto;
+    
+    z-index: 88;
+}
+
+.picker1{
+    margin-top: 500rpx;
+}
+
+.picker2{
+    margin-top: 30rpx;
+}
+
+.ipt {
+    display: flex;
+    /* 这行代码别删，我也不知道为什么，但是删了就不显示了 */
+}

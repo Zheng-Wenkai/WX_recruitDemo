@@ -1,0 +1,21 @@
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+
+    <view class='work work1'>
+        <image class='img' src="{{work[0]}}"></image>
+    </view>
+    <view class='work work2'>
+        <image class='img' src="{{work[1]}}"></image>
+    </view>
+    <view class='work work3'>
+        <image class='img' src="{{work[2]}}"></image>
+    </view>
+    <view class='work work4'>
+        <image class='img' src="{{work[3]}}"></image>
+    </view>
+    <view class='work work5'>
+        <image class='img' src="{{work[4]}}"></image>
+    </view>
+    
+</view>

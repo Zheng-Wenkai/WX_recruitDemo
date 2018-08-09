@@ -29,10 +29,10 @@ Page({
   },
   loginClick: function (e) {
     app.globalData.userInfo = { username: this.data.username, password: this.data.password }
-    if (app.globalData.userInfo.username == 'personel' && app.globalData.userInfo.password == 'aie2018!') {
+    if (app.globalData.userInfo.username == 'admin' && app.globalData.userInfo.password == 'admin') {
       util.showSuccess('登录成功');
       wx.redirectTo({
-        url: '../callForm/callForm',
+        url: '../department/department',
       })
     }
     else {

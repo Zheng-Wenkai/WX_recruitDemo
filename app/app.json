@@ -1,34 +1,40 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/search/search",
-    "pages/callForm/callForm",
     "pages/signForm/signForm",
-    "pages/inlogin/inlogin",
+    "pages/introduction/introduction",
+    "pages/story/story",
+    "pages/my/my",
+    "pages/callForm/callForm",
+    "pages/department/department",
+    "pages/search/search",
+    "pages/display/display",
+    "pages/admin/admin",
     "pages/perlogin/perlogin",
-    "pages/my/my"
+    "pages/inlogin/inlogin"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "AIE",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#80c1f2",
+    "navigationBarTitleText": "AIE_招新",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": "#80c1f2",
+    "color": "#989898",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/image/index-icon2.png",
-        "selectedIconPath": "/image/index-icon1.png"
+        "iconPath": "images/tab/index.png",
+        "selectedIconPath": "images/tab/index_hl.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "/image/my-icon1.png",
-        "selectedIconPath": "/image/my-icon2.png"
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/my_hl.png"
       }
     ]
   }

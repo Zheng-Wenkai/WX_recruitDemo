@@ -40,9 +40,16 @@ module.exports = {
             return res.end('img received');
         });
     },
+    my: function (req, res, next) {
+        console.log(req.query);
+        Sign.findOne({"openid": req.query.openid}, function (err, data) {
+            if (err) return next(err);
+            return res.json(data);
+        });
+
+    },
     searchForm: function (req, res, next) {
         console.log(req.query);
-
         Sign.findOne({"range": parseInt(req.query.rangeNum)}, function (err, data) {
             if (err) return next(err);
             return res.json(data);
@@ -51,15 +58,22 @@ module.exports = {
     },
     callForm: function (req, res, next) {
         console.log(req.query);
-        Sign.findOne({"isInterview": 0}, function (err, data) {
+        var cond = {
+            $and: [
+                {departmentsA: req.query.department},
+                {timeSlot: req.query.timeSlot},
+                {interviewResult: 0}
+            ]
+        };
+        Sign.findOne(cond, function (err, data) {
             if (err) return next(err);
             return res.json(data);
         });
 
     },
     searchPic: function (req, res, next) {
-        var path = 'uploads/' + req.params.studentId + '.jpg';// 路径
-        var filename = req.params.studentId + '.jpg';// 文件名称
+        var path = 'picture/' + req.params.phoneNumber + '.jpg';// 路径
+        var filename = req.params.phoneNumber + '.jpg';// 文件名称
         res.download(path, filename);
     },
     searchRangeState: function (req, res, next) {
@@ -67,7 +81,8 @@ module.exports = {
         var cond = {
             $and: [
                 {range: {$lt: parseInt(req.query.range)}},
-                {isInterview: 0}
+                {timeSlot: req.query.timeSlot},
+                {interviewResult: 0}
             ]
         };
         Sign.count(cond, function (err, data) {
@@ -78,7 +93,7 @@ module.exports = {
     },
     bePresent: function (req, res, next) {
         console.log(req.body);
-        Sign.updateOne({"range": req.body.range}, {"isInterview": 1}, function (err, data) {
+        Sign.updateOne({"range": req.body.range}, {"interviewResult": 1}, function (err, data) {
             if (err) return next(err);
             return res.json(data);
         });
@@ -90,31 +105,39 @@ module.exports = {
             return res.json(data);
         });
     },
-    rangeNumber: function (req, res, next) {
-        var dic = {};
+    signNumber: function (req, res, next) {
+        console.log("查询当前队列报名人数");
         var cond = {
             $and: [
-                {isInterview: 0}
+                {departmentsA: req.query.department},
+                {timeSlot: req.query.timeSlot},
             ]
         };
         Sign.count(cond, function (err, data) {
-            console.log("线上：", data);
+            console.log(data);
             if (err) return next(err);
-            dic["onlineNumber"] = data;
-            return res.json(dic);
-            // Sign2.count(cond, function (err, data) {
-            //     console.log("现场：", data);
-            //     if (err) return next(err);
-            //     dic["presentNumber"] = data;
-            //     console.log(dic);
-            //     return res.json(dic);
-            // });
+            return res.json(data);
+        });
+
+    },
+    rangeNumber: function (req, res, next) {
+        var cond = {
+            $and: [
+                {departmentsA: req.query.department},
+                {timeSlot: req.query.timeSlot},
+                {interviewResult: 0}
+            ]
+        };
+        Sign.count(cond, function (err, data) {
+            console.log(data);
+            if (err) return next(err);
+            return res.json(data);
         });
 
     },
     login: function (req, res, next) {
         var code = req.query.code;
-
+        console.log(code)
         request.get({
             uri: 'https://api.weixin.qq.com/sns/jscode2session',
             json: true,

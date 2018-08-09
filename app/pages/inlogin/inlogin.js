@@ -29,7 +29,7 @@ Page({
   },
   loginClick: function (e) {
     app.globalData.userInfo = { username: this.data.username, password: this.data.password }
-    if (app.globalData.userInfo.username == 'interviewer' && app.globalData.userInfo.password == 'scau2018!') {
+    if (app.globalData.userInfo.username == 'amdin' && app.globalData.userInfo.password == 'admin!') {
       util.showSuccess('登录成功');
       wx.redirectTo({
         url: '../search/search',

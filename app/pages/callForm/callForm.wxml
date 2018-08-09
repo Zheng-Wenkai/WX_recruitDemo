@@ -1,3 +1,39 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+
+    <image class='background_img' src='/images/my/background.jpg'></image>
+    <image class='avatar' src="{{imageSrc}}"></image>
+
+    <view class='content'>
+        <text class='ID'>编号：{{info.range}}</text>
+        <text class='queue'>当前队列剩余人数为：{{num}}</text>
+    </view>
+
+
+    <view class='ipt top'> <text class='info'>姓名  {{info.fullName}}</text> </view>
+    <view class="ipt"> <text class='info'>性别  {{info.gender}}</text> </view>
+    <view class="ipt"> <text class='info'>电话  {{info.phoneNumber}}</text> </view>
+    <view class="ipt"> <text class='info'>部门意愿一  {{info.departmentsA}}</text> </view>
+    <view class="ipt"> <text class='info'>部门意愿二  {{info.departmentsB}}</text> </view>
+    <!-- 面试时间 -->
+    <view class="ipt"> <text class='info'>面试时间  {{info.timeSlot}}</text> </view>
+    <view class='btn_container'>
+        <button bindtap='bePresentConfirm'>已到场</button>
+        <button bindtap='notBePresentConfirm'>未到场</button>
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
 <!--pages/callForm/callForm.wxml-->
 <!--
 <view class="information">
@@ -14,7 +50,7 @@
 </view>
 -->
 
-<view class="frame">
+<!-- <view class="frame">
   <view class="triangle-flex">
     <view class="triangle-1"></view>
     <view class="triangle-2"></view>
@@ -94,4 +130,4 @@
 <view class="button-list">
   <button bindtap='bePresent'>已到场</button>
   <button bindtap='notBePresent'>未到场</button>
-</view>
+</view> -->

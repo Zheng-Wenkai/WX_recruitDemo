@@ -1,5 +1,6 @@
 // pages/callForm/callForm.js
 const util = require('../../utils/util');
+const config = require('../../config.js')
 const app = getApp();
 Page({
 
@@ -8,76 +9,97 @@ Page({
    */
   data: {
     info: [],
-    imageSrc: '../../image/login.jpg'//设置默认图片
+    num:0,
+    imageSrc: '/images/my/avatar.png' //设置默认图片
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.callForm();
+    this.rangeNumber();
   },
-  callForm: function () {
+  callForm: function() {
     var that = this;
-    // console.log(app.globalData.callType);
     wx.request({
-      url: 'http://localhost:7010/callForm/',
+      url: config.callFormUrl,
       method: 'GET',
       data: {
-        // callType: app.globalData.callType
+        department: app.globalData.department,
+        timeSlot: app.globalData.timeSlot
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
-      success: function (res) {
+      success: function(res) {
         console.log(res);
         if (res.data == null) {
           wx.showModal({
-            title:'获取用户信息失败',
-            showCancel:false,
+            showCancel: false,
             content: '已无用户处于排队状态',
-            success: function (res) {
+            success: function(res) {
               if (res.confirm) {
-                wx.navigateBack({ delta: 1, })
-              } 
+                wx.navigateBack({
+                  delta: 1,
+                })
+              }
             }
           })
-        }
-        else {
+        } else {
           that.setData({
             info: res.data
           })
           // 也可以尝试使用静态目录下载图片
           wx.downloadFile({
-            url: 'http://localhost:7010/searchPic/' + that.data.info.studentId,
-            success: function (res) {
+            url: config.searchPicUrl + that.data.info.phoneNumber,
+            success: function(res) {
               console.log(res);
               if (res.statusCode == 500) {
                 util.showModel('获取用户照片失败', '该用户尚未上传个人照片');
-              }
-              else {
+              } else {
                 that.setData({
                   imageSrc: res.tempFilePath
                 })
               }
             },
-            fail: function (res) {
+            fail: function(res) {
               console.log(res);
               util.showModel('获取用户照片失败', '请检查网络连接是否正常')
             }
           })
         }
       },
-      fail: function (res) {
+      fail: function(res) {
         console.log(res);
         util.showModel('获取用户信息失败', '请检查网络连接是否正常');
       },
     })
   },
-  bePresent: function () {
+  rangeNumber: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:7010/bePresent',
+      url: config.rangeNumberUrl,
+      method: 'GET',
+      data: {
+        department: app.globalData.department,
+        timeSlot: app.globalData.timeSlot
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          num: res.data
+        })
+      }
+    })
+  },
+  bePresent: function() {
+    var that = this;
+    wx.request({
+      url: config.bePresentUrl,
       method: 'POST',
       data: {
         range: that.data.info.range,
@@ -86,41 +108,40 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         console.log('submit success', res.data, res.header, res.statusCode);
         that.callForm();
       },
-      fail: function () {
+      fail: function() {
         util.showModel('提交失败', '请检查网络是否正常连接');
       }
     })
   },
-  notBePresent: function () {
+  notBePresent: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:7010/notBePresent',
+      url: config.notBePresentUrl,
       method: 'POST',
       data: {
         range: that.data.info.range,
-        // callType: app.globalData.callType,
       },
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         console.log('submit success', res.data, res.header, res.statusCode);
         that.callForm();
       },
-      fail: function () {
+      fail: function() {
         util.showModel('提交失败', '请检查网络是否正常连接');
       }
     })
   },
-  bePresentConfirm:function(){
-    var that=this;
+  bePresentConfirm: function() {
+    var that = this;
     wx.showModal({
       content: '确认已到场？',
-      success: function (res) {
+      success: function(res) {
         if (res.confirm) {
           console.log('用户点击确定');
           that.bePresent()
@@ -130,11 +151,11 @@ Page({
       }
     })
   },
-  notBePresentConfirm:function(){
-    var that=this;
+  notBePresentConfirm: function() {
+    var that = this;
     wx.showModal({
       content: '确认未到场？',
-      success: function (res) {
+      success: function(res) {
         if (res.confirm) {
           console.log('用户点击确定');
           that.notBePresent()

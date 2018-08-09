@@ -10,11 +10,14 @@ module.exports=function (app) {
     // 上传照片
     app.route('/AieRecruit/uploadPic')
         .post(controllers.uploadPic);
+    // 个人页面
+    app.route('/AieRecruit/my')
+        .get(controllers.my);
     // 查询表单
     app.route('/AieRecruit/searchForm')
         .get(controllers.searchForm);
     // 查询照片
-    app.route('/AieRecruit/searchPic/:studentId')
+    app.route('/AieRecruit/searchPic/:phoneNumber')
         .get(controllers.searchPic);
     // 叫号
     app.route('/AieRecruit/callForm')
@@ -31,6 +34,9 @@ module.exports=function (app) {
     // 查询当前队列剩余人数
     app.route('/AieRecruit/rangeNumber')
         .get(controllers.rangeNumber);
+    // 查询当前队列报名人数
+    app.route('/AieRecruit/signNumber')
+        .get(controllers.signNumber);
     // 用户登录，获取openid
     app.route('/AieRecruit/login')
         .get(controllers.login);

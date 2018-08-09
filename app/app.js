@@ -1,47 +1,74 @@
 //app.js
 const util = require('utils/util.js')
-var qcloud = require('./vendor/wafer2-client-sdk/index')
-var config = require('./config')
+const config = require('./config.js')
 
 App({
-  onLoad: function (options) {
+  onLaunch: function(options) {
+    this.getOpenid();
+  },
+  getOpenid: function() {
+    var that = this;
     wx.login({
-      success: function (res) {
+      success: function(res) {
         console.log(res)
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://justforlearn.cn/login',
+            url: config.loginUrl,
             data: {
               code: res.code
             },
             method: 'GET',
-            header: { 'content-type': 'application/json' },
-            success: function (res) {
-              console.log(res.data)
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function(res) {
+              that.globalData.openid = res.data;
+              console.log(that.globalData.openid);
+              that.getInfo();
             }
           })
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
       },
-      fail: function () {
-
+      fail: function() {
         console.log("启用wx.login函数，失败！");
-
       },
-
-      complete: function () {
-
+      complete: function() {
         console.log("已启用wx.login函数");
-
       }
     })
   },
+  getInfo: function () {
+    var that = this;
+    wx.request({
+      url: config.myUrl,
+      method: 'GET',
+      data: {
+        openid: that.globalData.openid
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        if (res.data != null) {
+          that.globalData.isSign = true
+        }
+      },
+      fail: function (res) {
+        console.log(res);
+        util.showModel('获取用户信息失败', '请检查网络连接是否正常');
+      },
+
+    })
+  },
   globalData: {
-    userInfo: null,
-    openid:null
-    // signWay: null,
-    // callType: null
+    isSign: null,
+    openid: null,
+    signNumber:null,
+    phoneNumber: null,
+    department: null,
+    timeSlot: null,
   }
 })

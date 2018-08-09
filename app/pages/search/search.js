@@ -1,5 +1,7 @@
 // pages/search/search.js
 const util = require('../../utils/util')
+const config = require('../../config.js')
+const app = getApp();
 Page({
 
   /**
@@ -8,7 +10,7 @@ Page({
   data: {
     info: [],
     rangeInfo: null, //编号
-    imageSrc: null
+    imageSrc: '../../images/my/avatar.png'
   },
 
   /**
@@ -22,16 +24,14 @@ Page({
       rangeInfo: e.detail.value
     })
   },
-  searchForm: function() {
-    console.log(this.data.rangeInfo);
+  searchForm: function(e) {
+    //e.detail.value可以在用户点击完成后得到输入框的信息
     var that = this;
     util.showBusy('查询中...')
     wx.request({
-      url: 'http://localhost:7010/searchForm/',
+      url: config.searchFormUrl,
       method: 'GET',
       data: {
-        // rangeType: that.data.rangeInfo[0],
-        // rangeNum: that.data.rangeInfo.slice(1, ),
         rangeNum: that.data.rangeInfo
       },
       header: {
@@ -45,15 +45,13 @@ Page({
           that.setData({
             info: res.data
           })
+          app.globalData.phoneNumber=that.data.info.phoneNumber
           // 也可以尝试使用静态目录下载图片
           wx.downloadFile({
-            url: 'http://localhost:7010/searchPic/' + that.data.info.studentId,
+            url: config.searchPicUrl + that.data.info.phoneNumber,
             success: function(res) {
               console.log(res);
               if (res.statusCode == 500) {
-                that.setData({
-                  imageSrc: '../../image/login.jpg'
-                })
                 util.showModel('获取用户照片失败', '该用户尚未上传个人照片');
               } else {
                 util.showSuccess('查询成功');
@@ -63,9 +61,6 @@ Page({
               }
             },
             fail: function(res) {
-              that.setData({
-                imageSrc: '../../image/login.jpg'
-              })
               console.log(res);
               util.showModel('获取用户照片失败', '请检查网络连接是否正常')
             }
@@ -78,5 +73,24 @@ Page({
       },
 
     })
+  },
+  onCancelImgTap: function(event) {
+    this.setData({
+      searchPanelShow: false,
+    })
+  },
+  onBindFoucs: function(event) {
+    this.setData({
+      searchPanelShow: true
+    })
+  },
+  onBindBlur: function(event) {
+    var text = event.detail.value;
+  },
+  turnToDisplay: function() {
+    wx.navigateTo({
+      url: '../display/display',
+    })
   }
+
 })
