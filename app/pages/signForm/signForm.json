@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "报名"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "报名",
+    "navigationBarTextStyle": "black"
 }

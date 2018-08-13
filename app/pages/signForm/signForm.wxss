@@ -1,22 +1,75 @@
+
 .container {
-  width: 100%;
+    width: 100%;
 }
 
 .background_img {
-  width: 100%;
-  position: absolute;
-  height: 1680rpx;
+    width: 100%;
+    position: absolute;
+    height: 1680rpx;
+    z-index: -99;
 }
 
 .avatar {
-  height: 170rpx;
-  width: 170rpx;
-  position: absolute;
-  left: 290rpx;
-  top: 50rpx;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 1);
+    height: 170rpx;
+    width: 170rpx;
+    position: absolute;
+    left: 290rpx;
+    top: 50rpx;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 1);
 }
+
+ /* button {
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    font-family: Microsoft Yahei;
+    color: rgba(16, 16, 16, 0.8);
+    border: 3rpx solid #aaa;
+    background-color: #fff;
+}
+
+.btn_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn1 {
+     height: 45rpx;
+     width: 150rpx;
+     padding-left:30rpx;
+    line-height: 45rpx;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    font-family: Microsoft Yahei;
+    color: rgba(16, 16, 16, 0.8);
+    border: 3rpx solid #aaa;
+    background-color: #fff;
+    margin-top: -600rpx;
+    z-index: 99;
+}
+
+.btn2 {
+    margin-left: 100rpx; 
+    height: 45rpx;
+     width: 150rpx;
+     padding-left:30rpx;
+    line-height: 45rpx;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    font-family: Microsoft Yahei;
+    color: rgba(16, 16, 16, 0.8);
+    border: 3rpx solid #aaa;
+    background-color: #fff;
+    margin-top: -600rpx;
+    z-index: 99;
+}*/
+
 
 button {
   height: 50rpx;
@@ -42,72 +95,75 @@ button {
 
 .btn2 {
   margin-top: -600rpx;
-}
+} 
+
 
 .btn3 {
-  margin-top: -80rpx;
-  padding-left: 40rpx;
-  letter-spacing: 20rpx;
-  width: 175rpx;
+    margin-top: -80rpx;
+    padding-left: 40rpx;
+    letter-spacing: 20rpx;
+    width: 175rpx;
 }
 
 input, picker {
-  width: 600rpx;
-  height: 65rpx;
-  line-height: 65rpx;
-  text-align: left;
-  padding-left: 20rpx;
-  background: #fff;
-  color: rgba(16, 16, 16, 1);
-  font-size: 32rpx;
-  border-radius: 20rpx;
-  border: 3rpx solid #c9b1b1;
-  margin: 10rpx auto;
-  z-index: 88;
+    width: 600rpx;
+    height: 65rpx;
+    line-height: 65rpx;
+    text-align: left;
+    padding-left: 20rpx;
+    background: #fff;
+    color: rgba(16, 16, 16, 1);
+    font-size: 32rpx;
+    border-radius: 20rpx;
+    border: 3rpx solid #c9b1b1;
+    margin: 10rpx auto;
+    z-index: 998;
 }
 
-picker {
-  padding-left: 15rpx;
-  width: 605rpx;
+picker{
+    padding-left: 15rpx;
+    width: 605rpx;
 }
 
-input {
-  padding-left: 93rpx;
-  width: 527rpx;
+input{
+    padding-left: 93rpx;
+    width: 527rpx;
 }
 
 .ipt {
-  display: flex;
+    display:flex;
+    z-index: 50;
 }
 
 .top {
-  margin-top: 270rpx;
+    margin-top: 270rpx;
 }
 
-.hint {
-  color: rgba(16, 16, 16, 1);
-  font-size: 32rpx;
-  height: 65rpx;
-  line-height: 65rpx;
-  position: absolute;
-  margin-left: 25rpx;
-  margin-top: 11rpx;
-  z-index: 999;
+.hint{
+    color: rgba(16, 16, 16, 1);
+    font-size: 32rpx;
+    height: 65rpx;
+    line-height: 65rpx;
+    position: absolute;
+    margin-left: 25rpx;
+    margin-top: 11rpx;
+    margin-bottom: auto;
+    z-index: 999;
 }
 
 textarea {
-  margin: 120rpx auto;
-  width: 600rpx;
-  height: 400rpx;
-  border: 3rpx solid #c9b1b1;
-  z-index: 88;
-  line-height: 48rpx;
-  text-align: left;
-  padding-left: 20rpx;
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  background: #fff;
-  color: rgba(16, 16, 16, 1);
-  font-size: 32rpx;
-  border-radius: 20rpx;
+    margin: 120rpx auto;
+    width: 600rpx;
+    height: 400rpx;
+    border: 3rpx solid #c9b1b1;
+    z-index: 88;
+    line-height: 48rpx;
+    text-align: left;
+    padding-left: 20rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    background: #fff;
+    color: rgba(16, 16, 16, 1);
+    font-size: 32rpx;
+    border-radius: 20rpx;
 }

@@ -1,58 +1,58 @@
 <!--报名表单-->
 <view class='container'>
 
-  <image class='background_img' src='/images/my/background.jpg'></image>
+    <image class='background_img' src='/images/my/background.jpg'></image>
 
-  <!-- 上传图片后加载用户图片，否则加载科科 -->
-  <image class='avatar' src="{{isuploadpic ? avatar : '/images/my/avatar.png'}}"></image>
-  <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class='ipt top'>
-      <view class='hint'>姓名</view>
-      <input name="fullName" />
-    </view>
-    <view class="ipt">
-      <picker value="{{xingbie}}" range="{{gender}}" name="xingbie" bindchange='bindGenderChange'>
-        性别 {{gender[xingbie]}}
-      </picker>
-    </view>
-    <view class="ipt">
-      <picker value="{{xueyuan}}" range="{{college}}" name="xueyuan" bindchange='bindCollegeChange'>
-        学院 {{college[xueyuan]}}
-      </picker>
-    </view>
-    <view class="ipt">
-      <view class='hint'>专业</view>
-      <input name="major" />
-    </view>
-    <view class="ipt">
-      <view class='hint'>电话</view>
-      <input name="phoneNumber" type="number" bindchange='bindPhoneNumberChange' />
-    </view>
-    <view class="ipt">
-      <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
-        部门意愿一 {{departments[wishA]}}
-      </picker>
-    </view>
-    <view class="ipt">
-      <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange'>
-        部门意愿二 {{departments[wishB]}}
-      </picker>
-    </view>
-    <view class="ipt">
-      <!-- 面试时间 -->
-      <picker value="{{shijian}}" range="{{timeSlot}}" name="shijian" bindchange='bindTimeSlotChange'>
-        面试时间 {{timeSlot[shijian]}}
-      </picker>
-    </view>
-    <view class='ipt'>
-      <!-- 个人简介最长给300个汉字 -->
-      <textarea name='introduction' placeholder='个人简介：' maxlength='600' />
-    </view>
+    <!-- 上传图片后加载用户图片，否则加载科科 -->
+    <image class='avatar' src="{{tempFilePath}}"></image>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class='ipt top'>
+            <view class='hint'>姓名</view>
+            <input name="fullName" />
+        </view>
+        <view class="ipt">
+            <picker value="{{xingbie}}" range="{{gender}}" name="xingbie" bindchange='bindGenderChange'>
+                性别 {{gender[xingbie]}}
+            </picker>
+        </view>
+        <view class="ipt">
+            <picker value="{{xueyuan}}" range="{{college}}" name="xueyuan" bindchange='bindCollegeChange'>
+                学院 {{college[xueyuan]}}
+            </picker>
+        </view>
+        <view class="ipt">
+            <view class='hint'>专业</view>
+            <input name="major" />
+        </view>
+        <view class="ipt">
+            <view class='hint'>电话</view>
+            <input name="phoneNumber" type="number" bindchange='bindPhoneNumberChange' maxlength='11'/>
+        </view>
+        <view class="ipt">
+            <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
+                部门意愿一 {{departments[wishA]}}
+            </picker>
+        </view>
+        <view class="ipt">
+            <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange'>
+                部门意愿二 {{departments[wishB]}}
+            </picker>
+        </view>
+        <view class="ipt">
+            <!-- 面试时间 -->
+            <picker value="{{shijian}}" range="{{timeSlot}}" name="shijian" bindchange='bindTimeSlotChange'>
+                面试时间 {{timeSlot[shijian]}}
+            </picker>
+        </view>
+        <view class='ipt'>
+            <!-- 个人简介最长给300个汉字 -->
+            <textarea name='introduction' placeholder='个人简介：' maxlength='600' />
+        </view>
 
-    <button formType="submit" class='btn3'>提交</button>
-  </form>
-  <view class='btn_content'>
-    <button bindtap="uploadPic" class='btn1'>上传照片</button>
-    <button bindtap="uploadWork" class='btn2'>上传作品</button>
-  </view>
+        <button formType="submit" class='btn3'>提交</button>
+    </form>
+    <view class='btn_content'>
+        <button bindtap="uploadPic" class='btn1'>上传照片</button>
+        <button bindtap="uploadWork" class='btn2'>上传作品</button>
+    </view>
 </view>
