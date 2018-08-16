@@ -8,7 +8,7 @@ Page({
   data: {
     pics: [],
     //arrarys
-    college: ['', '数学与信息学院', '材料与能源学院', '工程学院', '国际教育学院', '经济管理学院', '林学与风景园林学院', '园艺学院', '资源环境学院', '电子工程学院', '动物科学学院', '海洋学院', '兽医学院', '水利与土木工程学院', '人文与法学学院', '公共管理学院', '外国语学院', '食品学院', '艺术学院', '农学院', '生命科学学院'],
+    college: ['', '数学与信息学院', '软件学院', '材料与能源学院', '工程学院', '国际教育学院', '经济管理学院', '林学与风景园林学院', '园艺学院', '资源环境学院', '电子工程学院', '动物科学学院', '海洋学院', '兽医学院', '水利与土木工程学院', '人文与法学学院', '公共管理学院', '外国语学院', '食品学院', '艺术学院', '农学院', '生命科学学院'],
     gender: ['', '男', '女'],
     timeSlot: ['', '9月15日8:00-9:00', '9月15日9:00-10:00', '9月15日10:00-11:00'],
     departments: ['', '自科部', '社科部', '新闻部', '运营部', '宣传部', '策划部', '项目部', '外联部', '办公室', '财务部', '竞赛部'],
@@ -21,7 +21,8 @@ Page({
     wishA: null,
     wishB: null,
     isuploadpic: false,
-    openid: null
+    openid: null,
+    tempFilePath: "/images/my/avatar.png"
   },
 
   /**
@@ -62,6 +63,8 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     if (e.detail.value.fullName == "" || e.detail.value.major == "" || e.detail.value.phoneNumber == "" || e.detail.value.xueyuan == null || e.detail.value.xingbie == null || e.detail.value.wishA == null || e.detail.value.shijian == null) {
       util.showModel('无法提交', '请将表单信息填写完整');
+    } else if (!/^1\d{10}$/.test(that.data.phoneNumber)) {
+        util.showModel('无法提交', '请输入正确的手机号码');
     } else if (this.data.isuploadpic == false) {
       util.showModel('无法提交', '请先上传个人照片');
     } else {
@@ -152,8 +155,11 @@ Page({
     var that = this;
     // 选择图片
     console.log(that.data.phoneNumber)
-    if (that.data.phoneNumber == null) {
-      util.showMessage("请将个人信息填写完整");
+    // if (that.data.phoneNumber == null) {
+    //   util.showMessage("请将个人信息填写完整");
+    // } else 
+    if (!/^1\d{10}$/.test(that.data.phoneNumber)) {
+        util.showMessage("请先输入正确的手机号码");
     } else {
       wx.chooseImage({
         count: 1, // 可选图片张数
@@ -161,6 +167,10 @@ Page({
         sourceType: ['album', 'camera'], // 来源为相册或相机
         success: function(res) {
           var tempFilePaths = res.tempFilePaths
+          //更换科科为上传的图片
+          that.setData({
+            tempFilePath: tempFilePaths[0]
+          })
           // 上传图片
           wx.uploadFile({
             url: config.uploadPicUrl,
@@ -190,9 +200,12 @@ Page({
   uploadWork: function() {
     var that = this,
       pics = this.data.pics;
-    if (that.data.phoneNumber == null) {
-      util.showMessage("请将个人信息填写完整");
-    } else {
+    //   if (that.data.phoneNumber == null) {
+    //       util.showMessage("请将个人信息填写完整");
+    //   } 
+      if (!/^1\d{10}$/.test(that.data.phoneNumber)) {
+          util.showMessage("请先输入正确的手机号码");
+      } else {
       wx.chooseImage({
         count: 5 - pics.length, // 可选图片张数
         sizeType: ['compressed'], // 使用压缩图

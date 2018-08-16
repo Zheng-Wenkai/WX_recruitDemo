@@ -3,7 +3,7 @@
     <image class='dashed' src="/images/index/dashed.png"></image>
     <image class='background' src='/images/my/background.jpg'></image>
     <image class='avatar' src='/images/my/avatar.png'></image>
-    <!-- <image class='avatar' src="{{image.avatar}}"></image> -->
+    <!-- <image class='avatar' src="{{info.avatat}}"></image> -->
     <!-- 这里要获取用户头像 -->
     <view class='content1'>
         <text class='ID'>编号：{{info.range}}</text>
