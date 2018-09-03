@@ -29,13 +29,18 @@
             <input name="phoneNumber" type="number" bindchange='bindPhoneNumberChange' maxlength='11'/>
         </view>
         <view class="ipt">
-            <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
-                部门意愿一 {{departments[wishA]}}
+            <picker value="{{fangshi}}" range="{{methods}}" name="fangshi" bindchange='bindMethodAChange'>
+                报名方式 {{methods[fangshi]}}
             </picker>
         </view>
         <view class="ipt">
+            <picker value="{{wishA}}" range="{{departments}}" name="wishA" bindchange='bindDepartAChange'>
+                第一志愿部门 {{departments[wishA]}}
+            </picker>
+        </view>
+        <view class="ipt" wx:if="{{condition}}">
             <picker value="{{wishA}}" range="{{departments}}" name="wishB" bindchange='bindDepartBChange'>
-                部门意愿二 {{departments[wishB]}}
+                第二志愿部门 {{departments[wishB]}}
             </picker>
         </view>
         <view class="ipt">
