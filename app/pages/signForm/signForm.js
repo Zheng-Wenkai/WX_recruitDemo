@@ -12,9 +12,9 @@ Page({
     gender: ['', '男', '女'],
     timeSlot: ['', '9月15日8:00-9:00', '9月15日9:00-10:00', '9月15日10:00-11:00'],
     departments: ['', '自科部', '社科部', '新闻部', '运营部', '宣传部', '策划部', '项目部', '外联部', '办公室', '财务部', '竞赛部'],
+       methods: ['社团联招','部门特招'],
     //pickers
     phoneNumber: null,
-
     xueyuan: null,
     xingbie: null,
     shijian: null,
@@ -22,6 +22,8 @@ Page({
     wishB: null,
     isuploadpic: false,
     openid: null,
+       fangshi: 0,
+       condition: true,
     tempFilePath: "/images/my/avatar.png"
   },
 
@@ -105,10 +107,14 @@ Page({
               },
               success: function(res) {
                 console.log(res.data);
-                wx.navigateBack({
-                  delta: 1,
-                })
-                util.showSuccess('提交成功');
+                // wx.navigateBack({
+                //   delta: 1,
+                // })
+                // util.showSuccess('提交成功');
+                  util.showSuccess('报名成功');
+                  wx.navigateTo({
+                      url: '../my/my',
+                  })
               },
               fail: function() {
                 util.showModel('提交失败', '请检查网络是否正常连接');
@@ -136,6 +142,20 @@ Page({
       shijian: e.detail.value
     })
   },
+        bindMethodAChange:function(e){
+            this.setData({
+                fangshi: e.detail.value
+            })
+            if (e.detail.value == 1){
+                this.setData({
+                    condition: false
+                })
+            } else {
+                this.setData({
+                    condition: true
+                })
+            }
+        },
   bindDepartAChange: function(e) {
     this.setData({
       wishA: e.detail.value

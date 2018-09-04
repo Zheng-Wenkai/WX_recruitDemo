@@ -6,7 +6,7 @@
 .background_img {
     width: 100%;
     position: absolute;
-    height: 1680rpx;
+    height: 1725rpx;
     z-index: -99;
 }
 
