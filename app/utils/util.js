@@ -1,3 +1,4 @@
+// 改变时间格式
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -5,10 +6,10 @@ const formatTime = date => {
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+// 改变数字格式
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -28,13 +29,14 @@ var showSuccess = text => wx.showToast({
   icon: 'success'
 })
 
-// 显示失败提示
+// 带标题的消息提示
 var showModel = (title, content) => {
   wx.hideToast();
   wx.showModal({
     title,
     content: JSON.stringify(content),
-    showCancel: false
+    showCancel: false,
+    confirmText: "确定"
   })
 }
 
@@ -42,14 +44,11 @@ var showModel = (title, content) => {
 var showMessage = content => {
   wx.hideToast();
   wx.showModal({
-    content: content,
+    content: JSON.stringify(content),
     showCancel: false,
     confirmText: "确定"
   })
 }
-
-
-
 
 
 module.exports = { formatTime, showBusy, showSuccess, showModel, showMessage }

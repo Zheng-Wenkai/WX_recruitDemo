@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/department/department",
     "pages/signForm/signForm",
     "pages/introduction/introduction",
     "pages/story/story",
     "pages/my/my",
     "pages/callForm/callForm",
-    "pages/department/department",
     "pages/search/search",
     "pages/display/display",
     "pages/admin/admin",

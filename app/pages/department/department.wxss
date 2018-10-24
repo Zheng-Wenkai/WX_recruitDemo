@@ -52,10 +52,12 @@ picker {
 
 .picker1{
     margin-top: 500rpx;
+    width: 500rpx;
 }
 
 .picker2{
     margin-top: 30rpx;
+    width: 500rpx;
 }
 
 .ipt {
